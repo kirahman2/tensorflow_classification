@@ -1,3 +1,5 @@
+![alt text](https://github.com/kirahman2/tensorflow_classification/blob/master/images/tensorflow.png)
+
 ## Introduction
 The data set in this project has already been preprocessed. It comes from a previous project I did on Fraudulent Credit Card Transactions. [Click here to see how the data was processed](https://github.com/kirahman2/fraud_detection/blob/master/README.md)
 
