@@ -9,11 +9,11 @@ The goal of this project is to discover the power of deep learning using Tensorf
 In this project several variables were previously imputed and new features were created. The dataset was also upsampled and downsampled to balance the dataset. Please refer to the link in the introduction for further explanation.
 
 ## Modeling
-During the modeling phase, I tested single layer and multilayer nets with varying numbers of neurons. After testing several neural net combinations, I found the best model has 8 inner layers with 256 neurons. In addition to 8 inner layers, adding L2 regularization along with Dropout reduced overfitting which improved the model score. 
+During the modeling phase, I tested single layer and multilayer nets with varying numbers of neurons. After testing several neural net combinations, I found the best model to have 8 inner layers with 256 neurons. In addition to 8 inner layers, adding L2 regularization along with Dropout reduced overfitting which improved the model score. 
 
-Whiling fitting the model with 100 epochs, I saved each checkpoint and automatically tested and determined the best threshold (down to the thousandth) to produce the best AUC score for each epoch on the test dataset. 
+While fitting the model with 100 epochs, I saved each checkpoint and automatically tested and determined the best threshold (down to the thousandth place, .001), which produced the best AUC score for each checkpoint on the test dataset. 
 
-After scoring each checkpoint, the script then saved the best checkpoint and threshold and stored this model in Tensorflow format (.tf). Using the load_saved_model method from the SaveModel class, the script loads the best model and makes predictions on new data. 
+After each checkpoint and threshold was saved, the script automatically stored the threshold and best performing model in Tensorflow format (.tf). Using the load_saved_model method from the SaveModel class, the script loads the model and is able to  make predictions on new data. 
 
 ## Results
 | Model   | Performance | Performance with Tuning | 
@@ -25,5 +25,5 @@ After scoring each checkpoint, the script then saved the best checkpoint and thr
 | Cat Boost Classifier | 0.887 AUC| 0.908 AUC|
 
 ## Conclusion
-I was surprised to see that the neural net did not outperform Catboost. Given the amount of data, I was convinced the neural net would beat CatBoost. Despite testing and combining the best regularization techniques, I couldn’t attain a better score. I spent weeks testing different neural net models, which helped. When I decided to tune each threshold to the thousandth place, I certainly saw an improvement in the neural net’s performance. Ultimately, moving forward, the way to improve this score would be through creating new features and feeding the model additional data. 
+I was surprised to see that the neural net did not outperform Catboost. Given the amount of data, I was convinced the neural net would beat CatBoost. Despite testing and combining the best regularization techniques, I couldn’t attain a better score. I spent weeks testing different neural net models, which helped. When I decided to tune each threshold to the thousandth place, I certainly saw an improvement in the neural net’s performance. Ultimately, the way to improve this score would be through creating new features and feeding the model additional data. 
 
