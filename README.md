@@ -18,7 +18,7 @@ After each checkpoint and threshold was saved, the script automatically stored t
 ## Results
 | Model   | Performance | Performance with Tuning | 
 | :------------- |:-------------|:-----|
-| Neural Net | 0.000 AUC| 0.871 AUC|
+| Neural Net | 0.856 AUC| 0.869 AUC|
 | Logistic Regression | 0.720 AUC| 0.798 AUC|
 | Random Forest Classifier | 0.846 AUC| 0.861 AUC|
 | XGB Classifier     | 0.819 AUC| 0.880 AUC|
